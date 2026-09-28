@@ -1,0 +1,208 @@
+%PDF-1.4
+%ASCII-PDF
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+4 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R] /Count 6 >>
+endobj
+5 0 obj
+<< /Type /Catalog /Pages 4 0 R /PageMode /UseOutlines >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 879 >>
+stream
+BT /F2 22 Tf 55 785 Td (Guia Pratico de Nomenclatura para Codigo) Tj ET
+BT /F1 10 Tf 55 805 Td (Guia de referencia - nomenclatura-dev) Tj ET
+BT /F2 14 Tf 55 737 Td (Nomenclatura clara para projetos TypeScript / JavaScript) Tj ET
+BT /F1 10.5 Tf 62 713 Td (Um guia direto para nomear variaveis, metodos, classes, contratos e arquivos.) Tj ET
+BT /F1 10.5 Tf 62 695 Td (Foco: legibilidade, intencao e consistencia em Clean Architecture, Hexagonal, DDD e CQRS.) Tj ET
+BT /F2 10.5 Tf 62 673 Td (Regra central: o nome deve revelar o papel do codigo sem exigir abrir a implementacao.) Tj ET
+BT /F1 10.5 Tf 62 651 Td (Exemplo ruim: const data = await repo.find\(id\)) Tj ET
+BT /F3 9.5 Tf 72 633 Td (const product = await productRepository.findById\(productId\);) Tj ET
+BT /F1 10.5 Tf 62 615 Td (Use este material como referencia rapida durante implementacao, review e refatoracao.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 9 0 R /Annots [18 0 R 19 0 R 20 0 R 21 0 R 22 0 R 23 0 R] >>
+endobj
+9 0 obj
+<< /Length 456 >>
+stream
+BT /F2 22 Tf 55 785 Td (Sumario) Tj ET
+BT /F1 12 Tf 70 747 Td (1. Fundamentos de nomes) Tj ET
+BT /F1 12 Tf 70 717 Td (2. Entidades, VO e Use Cases) Tj ET
+BT /F1 12 Tf 70 687 Td (3. Controllers, DTOs, Repositories e Gateways) Tj ET
+BT /F1 12 Tf 70 657 Td (4. Strategies, Observers, Factories e Presenters) Tj ET
+BT /F1 12 Tf 70 627 Td (5. Infraestrutura e argumentos de construtor) Tj ET
+BT /F1 12 Tf 70 597 Td (6. CQRS, eventos, erros e cheat sheet) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 1233 >>
+stream
+BT /F2 22 Tf 55 785 Td (1. Fundamentos de nomes) Tj ET
+BT /F2 14 Tf 55 737 Td (Variaveis) Tj ET
+BT /F1 10.5 Tf 62 713 Td (Prefira substantivos que indiquem exatamente o conteudo.) Tj ET
+BT /F3 9.5 Tf 72 695 Td (product | activeProducts | authenticatedUser | totalProducts) Tj ET
+BT /F1 10.5 Tf 62 677 Td (Evite: data, value, result, obj, temp, item quando o contexto permite ser especifico.) Tj ET
+BT /F2 14 Tf 55 649 Td (Booleanos) Tj ET
+BT /F1 10.5 Tf 62 625 Td (Devem soar como perguntas.) Tj ET
+BT /F3 9.5 Tf 72 607 Td (isActive | hasPermission | canDelete | shouldRetry | exists) Tj ET
+BT /F2 14 Tf 55 579 Td (Metodos e funcoes) Tj ET
+BT /F1 10.5 Tf 62 555 Td (Normalmente comecam por verbo e descrevem uma acao.) Tj ET
+BT /F3 9.5 Tf 72 537 Td (createProduct\(\) | findById\(\) | calculatePrice\(\) | sendEmail\(\)) Tj ET
+BT /F1 10.5 Tf 62 519 Td (findById: pode nao encontrar. getById: geralmente pressupoe existencia ou lanca erro.) Tj ET
+BT /F2 14 Tf 55 491 Td (Colecoes, IDs e datas) Tj ET
+BT /F3 9.5 Tf 72 467 Td (product / products | productId | createdAt | dueDate | totalItems) Tj ET
+BT /F1 10.5 Tf 62 449 Td (Use plural para colecoes; sufixo Id para identificadores; At para instante; Date para data conceitual.) Tj ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 1473 >>
+stream
+BT /F2 22 Tf 55 785 Td (2-3. Dominio, aplicacao e portas) Tj ET
+BT /F2 14 Tf 55 737 Td (Entidades) Tj ET
+BT /F1 10.5 Tf 62 713 Td (Use substantivos do dominio. A pasta ja pode informar que e uma entidade.) Tj ET
+BT /F3 9.5 Tf 72 695 Td (Product | Customer | Order | Payment) Tj ET
+BT /F2 14 Tf 55 667 Td (Value Objects) Tj ET
+BT /F1 10.5 Tf 62 643 Td (Nomeie o conceito, nao a categoria arquitetural.) Tj ET
+BT /F3 9.5 Tf 72 625 Td (Email | Money | CPF | ProductId | Address) Tj ET
+BT /F2 14 Tf 55 597 Td (Use Cases) Tj ET
+BT /F1 10.5 Tf 62 573 Td (Padrao forte: Verbo + Objeto.) Tj ET
+BT /F3 9.5 Tf 72 555 Td (CreateProduct | UpdateProduct | FindProductById | CancelOrder) Tj ET
+BT /F2 14 Tf 55 527 Td (Controllers) Tj ET
+BT /F3 9.5 Tf 72 503 Td (ProductController | CreateProductController) Tj ET
+BT /F2 14 Tf 55 475 Td (DTOs) Tj ET
+BT /F1 10.5 Tf 62 451 Td (Inclua a finalidade ou direcao.) Tj ET
+BT /F3 9.5 Tf 72 433 Td (CreateProductDTO | UpdateProductDTO | ProductResponseDTO) Tj ET
+BT /F2 14 Tf 55 405 Td (Repositories) Tj ET
+BT /F1 10.5 Tf 62 381 Td (Contrato no dominio/aplicacao; tecnologia na implementacao.) Tj ET
+BT /F3 9.5 Tf 72 363 Td (ProductRepository -> PrismaProductRepository) Tj ET
+BT /F2 14 Tf 55 335 Td (Gateways) Tj ET
+BT /F1 10.5 Tf 62 311 Td (Representam comunicacao com recursos ou servicos externos.) Tj ET
+BT /F3 9.5 Tf 72 293 Td (PaymentGateway -> StripePaymentGateway) Tj ET
+BT /F3 9.5 Tf 72 275 Td (EmailGateway -> ResendEmailGateway) Tj ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 1545 >>
+stream
+BT /F2 22 Tf 55 785 Td (4-5. Comportamentos, apresentacao e infraestrutura) Tj ET
+BT /F2 14 Tf 55 737 Td (Strategies) Tj ET
+BT /F1 10.5 Tf 62 713 Td (Nomeie o comportamento variavel.) Tj ET
+BT /F3 9.5 Tf 72 695 Td (CompressionStrategy -> ZipCompressionStrategy) Tj ET
+BT /F3 9.5 Tf 72 677 Td (ExtractionStrategy -> PdfExtractionStrategy) Tj ET
+BT /F2 14 Tf 55 649 Td (Observers) Tj ET
+BT /F1 10.5 Tf 62 625 Td (Pode usar o evento observado ou a acao disparada pelo evento.) Tj ET
+BT /F3 9.5 Tf 72 607 Td (OrderCreatedObserver | SendEmailOnUserRegistered) Tj ET
+BT /F2 14 Tf 55 579 Td (Factories, Mappers, Presenters e Validators) Tj ET
+BT /F3 9.5 Tf 72 555 Td (ProductFactory | ProductMapper | ProductPresenter | ProductValidator) Tj ET
+BT /F2 14 Tf 55 527 Td (Services) Tj ET
+BT /F1 10.5 Tf 62 503 Td (Evite ProductService quando existir uma responsabilidade mais especifica.) Tj ET
+BT /F3 9.5 Tf 72 485 Td (PasswordHashService | TokenService | ImageProcessingService) Tj ET
+BT /F2 14 Tf 55 457 Td (Infraestrutura) Tj ET
+BT /F1 10.5 Tf 62 433 Td (Explicite tecnologia + papel quando isso melhora a leitura.) Tj ET
+BT /F3 9.5 Tf 72 415 Td (prisma-client.ts | redis-cache.ts | resend-email-gateway.ts) Tj ET
+BT /F2 14 Tf 55 387 Td (Argumentos de construtor) Tj ET
+BT /F1 10.5 Tf 62 363 Td (Nomeie pela responsabilidade exercida na classe.) Tj ET
+BT /F3 9.5 Tf 72 345 Td (productRepository | paymentGateway | tokenProvider | cache) Tj ET
+BT /F1 10.5 Tf 62 327 Td (Evite abreviacoes desnecessarias como repo, svc e mgr em codigo de negocio.) Tj ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 4 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 1 0 R /F2 2 0 R /F3 3 0 R >> >> /Contents 17 0 R >>
+endobj
+17 0 obj
+<< /Length 1642 >>
+stream
+BT /F2 22 Tf 55 785 Td (6. CQRS, eventos, erros e cheat sheet) Tj ET
+BT /F2 14 Tf 55 737 Td (Commands e Queries) Tj ET
+BT /F3 9.5 Tf 72 713 Td (CreateProductCommand | UpdateProductCommand | DeleteProductCommand) Tj ET
+BT /F3 9.5 Tf 72 695 Td (FindProductByIdQuery | ListProductsQuery) Tj ET
+BT /F3 9.5 Tf 72 677 Td (CreateProductCommandHandler | ListProductsQueryHandler) Tj ET
+BT /F2 14 Tf 55 649 Td (Eventos) Tj ET
+BT /F1 10.5 Tf 62 625 Td (Eventos representam fatos que ja aconteceram; use passado.) Tj ET
+BT /F3 9.5 Tf 72 607 Td (UserCreated | OrderPlaced | OrderPaid | PaymentConfirmed) Tj ET
+BT /F2 14 Tf 55 579 Td (Errors) Tj ET
+BT /F1 10.5 Tf 62 555 Td (Nomeie a condicao concreta de erro.) Tj ET
+BT /F3 9.5 Tf 72 537 Td (ProductNotFoundError | InvalidProductPriceError | EmailAlreadyExistsError) Tj ET
+BT /F2 14 Tf 55 509 Td (Cheat sheet) Tj ET
+BT /F1 10.5 Tf 62 485 Td (Coisa: Product, Order, Email, Money) Tj ET
+BT /F1 10.5 Tf 62 467 Td (Acao: CreateProduct, DeleteOrder, SendEmail) Tj ET
+BT /F1 10.5 Tf 62 449 Td (Contrato: ProductRepository, PaymentGateway, Cache) Tj ET
+BT /F1 10.5 Tf 62 431 Td (Implementacao: PrismaProductRepository, StripePaymentGateway, RedisCache) Tj ET
+BT /F1 10.5 Tf 62 413 Td (Transformacao: ProductMapper, ProductPresenter) Tj ET
+BT /F1 10.5 Tf 62 395 Td (Regra: ProductValidator, DiscountStrategy) Tj ET
+BT /F1 10.5 Tf 62 377 Td (Evento: ProductCreated, OrderPaid) Tj ET
+BT /F1 10.5 Tf 62 359 Td (Entrada/saida: CreateProductDTO, ProductResponseDTO) Tj ET
+BT /F2 10.5 Tf 62 337 Td (Se a classe so aceita nomes como Manager, Helper, Utils ou Service, revise se ela tem responsabilidades demais.) Tj ET
+endstream
+endobj
+18 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 743 520 761] /Border [0 0 0] /Dest [10 0 R /XYZ null 800 null] >>
+endobj
+19 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 713 520 731] /Border [0 0 0] /Dest [12 0 R /XYZ null 800 null] >>
+endobj
+20 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 683 520 701] /Border [0 0 0] /Dest [12 0 R /XYZ null 800 null] >>
+endobj
+21 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 653 520 671] /Border [0 0 0] /Dest [14 0 R /XYZ null 800 null] >>
+endobj
+22 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 623 520 641] /Border [0 0 0] /Dest [14 0 R /XYZ null 800 null] >>
+endobj
+23 0 obj
+<< /Type /Annot /Subtype /Link /Rect [65 593 520 611] /Border [0 0 0] /Dest [16 0 R /XYZ null 800 null] >>
+endobj
+xref
+0 24
+0000000000 65535 f 
+0000000020 00000 n 
+0000000090 00000 n 
+0000000165 00000 n 
+0000000233 00000 n 
+0000000324 00000 n 
+0000000396 00000 n 
+0000000542 00000 n 
+0000001471 00000 n 
+0000001669 00000 n 
+0000002175 00000 n 
+0000002323 00000 n 
+0000003608 00000 n 
+0000003756 00000 n 
+0000005281 00000 n 
+0000005429 00000 n 
+0000007026 00000 n 
+0000007174 00000 n 
+0000008868 00000 n 
+0000008991 00000 n 
+0000009114 00000 n 
+0000009237 00000 n 
+0000009360 00000 n 
+0000009483 00000 n 
+trailer
+<< /Size 24 /Root 5 0 R >>
+startxref
+9606
+%%EOF
